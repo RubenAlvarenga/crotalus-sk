@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import sys, os
+
+sys.path.append(os.path.split(os.path.split(os.path.abspath(__file__))[0])[0]+'/g2')
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'coopnet.settings.local')
+import django
+django.setup()
+
+PATH = os.path.dirname(os.path.abspath(__file__))
+
+
+IP_SERVIDOR = '192.168.3.202'
+PORT = 9988
+
+
+ALLOWED_IPS = ['127.0.0.1', '192.168.3.202']
+ENTIDAD = '999999999999999'
+BIN = '627431128'
+COUCHDB_SERVER = 'http://192.168.3.103:5984/'
+
+
+CONCEPTO_DEBITO = 22
+CONCEPTO_CREDITO = 23
+TIPO_DOCUMENTO = 'TS'
+
+CONCEPTO_DEBITO_RECARGO = 34
+CONCEPTO_CREDITO_RECARGO = 35
+TIPO_DOCUMENTO_RECARGO = 'CATM'
+
+"""
+Detalle de los costos de descuentos por uso de ATM (Cajeros Automáticos):
+Consulta ATM: 2 consulta por mes sin costo, a partir de la tercera, Gs.5.000 por consulta.
+Adelanto de Efectivo en ATM: 3 extracciones al mes sin costo; a partir de la cuarta Gs.5.000 Red PROCARD y Gs.5.000 Red DINELCO.
+"""
+RECARGO_ATM = True
+FREE_CONSULTA_MES = 2
+RECARGO_CONSULTA_PROCARD = 5000
+RECARGO_CONSULTA_DINELCO = 5000
+
+FREE_EXTRACCION_MES = 3
+RECARGO_EXTRACCION_PROCARD = 5000
+RECARGO_EXTRACCION_DINELCO = 5000

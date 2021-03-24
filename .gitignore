@@ -1,0 +1,6 @@
+*.log
+*.pot
+*.pyc
+constant.py
+log/*
+run/*
