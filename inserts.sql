@@ -15,5 +15,48 @@ INSERT INTO tccodopr ("TCOS_PROCESO", "TCOS_TIPCOD", "TCOS_CODIGO", "TCOS_DESCRI
 INSERT INTO tccodopr ("TCOS_PROCESO", "TCOS_TIPCOD", "TCOS_CODIGO", "TCOS_DESCRIPCION", "TCOS_ESTADO") VALUES ( 'BEP', 'RET', 96, 'EMISOR DE TARJETA FUERA DE SERVICIO', 'ACT');
 
 
+select * from tccodopr
+
 
 INSERT INTO tctipo ("TCTI_TIPO", "TCTI_NOMBR", "TCTI_COMIS", "TCTI_INTER", "TCTI_MONED", "TCTI_COTIZ") VALUES ('TD1', 'SOCIO - CENCOPAN DEBITO', 1.00, 1.00, 1, 1)
+
+
+select * from ahtipo
+
+
+select * from ahconcep order by "AHCO_CODCO" desc
+
+
+--INSERT INTO ahconcep ("AHCO_CODCO", "AHCO_NOMBR", "AHCO_DBCR", "AHCO_CTACO", "AHCO_TIPO") VALUES (40 ,'EXTRACCION TARJETA DE DEBITO', 'D', '',Null);
+--INSERT INTO ahconcep ("AHCO_CODCO", "AHCO_NOMBR", "AHCO_DBCR", "AHCO_CTACO", "AHCO_TIPO") VALUES (41 ,'REVERSA POR TARJETA DEBITO', 'C', '',Null);
+--INSERT INTO ahconcep ("AHCO_CODCO", "AHCO_NOMBR", "AHCO_DBCR", "AHCO_CTACO", "AHCO_TIPO") VALUES (42 ,'CARGO USO ATM', 'D', '1', 1);
+--INSERT INTO ahconcep ("AHCO_CODCO", "AHCO_NOMBR", "AHCO_DBCR", "AHCO_CTACO", "AHCO_TIPO") VALUES (43 ,'REVERSA CARGO USO ATM', 'C', '1', 1);
+
+
+
+
+
+select * from ahconcep where "AHCO_CODCO" in (22, 23, 34, 35) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ AHCO_CODCO |          AHCO_NOMBR          | AHCO_DBCR | AHCO_CTACO | AHCO_TIPO 
+------------+------------------------------+-----------+------------+-----------
+         22 | EXTRACCION TARJETA DE DEBITO | D         |            |         0
+         23 | REVERSA POR TARJETA DEBITO   | C         |            |         0
+         34 | CARGO USO ATM                | D         | 1          |         1
+         35 | REVERSA CARGO USO ATM        | C         | 1          |         1
+(4 rows)
+

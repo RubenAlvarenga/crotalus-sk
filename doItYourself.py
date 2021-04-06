@@ -20,7 +20,7 @@ def get_secuenciador_mensaje():
 
 
 while True:
-    ctaDebito= raw_input("Cuenta Debito [1041088]:") or "1041088"
+    ctaDebito= raw_input("Cuenta Debito [1011240]:") or "1011240"
 
 
 
